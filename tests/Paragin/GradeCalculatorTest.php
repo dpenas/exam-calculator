@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tests\Paragin;
 
-use App\Infrastructure\Spreadsheet\ExcelExamParser;
 use App\Infrastructure\Spreadsheet\ParaginExamReader;
 use App\Service\Calculation\ParaginGradeCalculatorService;
 use PHPUnit\Framework\TestCase;
