@@ -5,8 +5,9 @@
         - Which value should we use in the edge case that nobody answered the question correctly (because we can't divide by zero)?
         - (this is also a question to the PO): Is there a range of values that can be considered too good or too bad that need to be highlighted to the teacher?
     - When calculating the r_it-value:
-            - The way I understand it, you correlate the result of a specific question with the overall result of a student in the exam. Should the specific question be included in the result of the exam? What if a question has way more value than another? Wouldn't that affect the data?
-    - When calculating the $r_{it}$-value and looking at the Wikipedia page of the Pearson correlation coefficient, what happens if the denominator is 0? Should we return 0.0?
+        - The way I understand it, you correlate the result of a specific question with the overall result of a student in the exam. Should the specific question be included in the result of the exam? What if a question has way more value than another? Wouldn't that affect the data?
+        - When calculating the $r_{it}$-value and looking at the Wikipedia page of the Pearson correlation coefficient, what happens if the denominator is 0? Should we return 0.0?
+        - How many decimals should we return?
 - Questions to the PO:
     - (also to the assessment expert): For both analytic values: should we include all students and all values or are there some of them that should be excluded (they didn't finish all the questions, for example)?
     - (also to the assessment expert): Is there a difference between a student giving the wrong answer and not responding to the question?
