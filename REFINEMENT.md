@@ -1,7 +1,6 @@
 - Questions for the assessment expert:
     - About the grade: what happens in between the percentages? If a student gets a 99%, will they also receive a 5.5, same as someone who only got 70%? This seems a bit strange (for this assessment I will do some interpolation).
     - When calculating the p-value:
-        - Which value should we use in the edge case that nobody answered the question correctly (because we can't divide by zero)?
         - (this is also a question to the PO): Is there a range of values that can be considered too good or too bad that need to be highlighted to the teacher?
     - When calculating the r_it-value:
         - The way I understand it, you correlate the result of a specific question with the overall result of the students in the exam and in that specific question. Should the specific question be included in the calculation itself? What if a question has way more value than another? Wouldn't that affect the data?
