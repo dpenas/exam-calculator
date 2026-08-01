@@ -6,7 +6,7 @@ namespace App\Service\Calculation;
 
 use App\Domain\Exam;
 
-final class PValueCalculatorService implements GradeCalculatorInterface
+class PValueCalculatorService implements GradeCalculatorInterface
 {
     public function calculate(Exam $exam): array
     {
