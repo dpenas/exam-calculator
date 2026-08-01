@@ -1,7 +1,7 @@
 <?php
- 
+
 declare(strict_types=1);
- 
+
 namespace App\Domain;
 
 final readonly class GradeResult
@@ -10,5 +10,6 @@ final readonly class GradeResult
         public Student $student,
         public float $grade,
         public bool $passed,
-    ) {}
+    ) {
+    }
 }

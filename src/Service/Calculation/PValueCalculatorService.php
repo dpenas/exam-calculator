@@ -19,7 +19,7 @@ final class PValueCalculatorService implements GradeCalculatorInterface
                 $totalScore += $student->scores[$question->number - 1];
             }
 
-            $averageScore = $totalScore/count($exam->students);
+            $averageScore = $totalScore / count($exam->students);
 
             $results[$question->number] = round(
                 $averageScore / $question->maxScore,

@@ -1,7 +1,7 @@
 <?php
- 
+
 declare(strict_types=1);
- 
+
 namespace App\Service\Calculation;
 
 use App\Domain\Exam;
@@ -9,7 +9,7 @@ use App\Domain\GradeResult;
 
 class ParaginGradeCalculatorService implements GradeCalculatorInterface
 {
-    const MIN_PASSING_GRADE = 5.5;
+    public const MIN_PASSING_GRADE = 5.5;
 
     public function calculate(Exam $exam): array
     {
@@ -29,7 +29,7 @@ class ParaginGradeCalculatorService implements GradeCalculatorInterface
             $results[] = new GradeResult($student, $grade, $passed);
         }
 
-        return $results;    
+        return $results;
     }
 
     public function calculateGrade(float $percentage): float

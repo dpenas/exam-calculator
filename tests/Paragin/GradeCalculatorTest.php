@@ -8,12 +8,17 @@ use App\Infrastructure\Spreadsheet\ParaginExamReader;
 use App\Service\Calculation\ParaginGradeCalculatorService;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 final class GradeCalculatorTest extends TestCase
 {
     public function testCalculatesGradesForExamOne(): void
     {
         $reader = new ParaginExamReader();
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_1.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_1.xlsx');
 
         $calculator = new ParaginGradeCalculatorService();
 
@@ -45,7 +50,7 @@ final class GradeCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_2.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_2.xlsx');
 
         $calculator = new ParaginGradeCalculatorService();
 
@@ -77,7 +82,7 @@ final class GradeCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_3.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_3.xlsx');
 
         $calculator = new ParaginGradeCalculatorService();
 
@@ -111,7 +116,7 @@ final class GradeCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_4.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_4.xlsx');
 
         $calculator = new ParaginGradeCalculatorService();
 

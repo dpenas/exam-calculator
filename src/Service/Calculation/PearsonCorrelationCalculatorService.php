@@ -1,5 +1,5 @@
 <?php
- 
+
 declare(strict_types=1);
 
 namespace App\Service\Calculation;
@@ -36,8 +36,8 @@ class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
     {
         $count = count($itemScores);
 
-        $meanItemScores = array_sum($itemScores)/$count;
-        $meanTotalScores = array_sum($totalScores)/$count;
+        $meanItemScores = array_sum($itemScores) / $count;
+        $meanTotalScores = array_sum($totalScores) / $count;
 
         $numerator = 0.0;
         $sumItemScores = 0.0;
@@ -52,12 +52,12 @@ class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
             $sumTotalScores += $dTotalScores ** 2;
         }
 
-        $denominator = sqrt($sumItemScores*$sumTotalScores);
+        $denominator = sqrt($sumItemScores * $sumTotalScores);
 
         if ($denominator === 0.0) {
             return 0.00;
         }
 
-        return round($numerator/$denominator, 2);
+        return round($numerator / $denominator, 2);
     }
 }

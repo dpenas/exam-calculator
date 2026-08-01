@@ -8,13 +8,18 @@ use App\Infrastructure\Spreadsheet\ParaginExamReader;
 use App\Service\Calculation\PValueCalculatorService;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @internal
+ *
+ * @coversNothing
+ */
 final class PValueCalculatorTest extends TestCase
 {
     public function testCalculatesPValuesForExamOne(): void
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_1.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_1.xlsx');
 
         $calculator = new PValueCalculatorService();
 
@@ -31,7 +36,7 @@ final class PValueCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_2.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_2.xlsx');
 
         $calculator = new PValueCalculatorService();
 
@@ -47,7 +52,7 @@ final class PValueCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_3.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_3.xlsx');
 
         $calculator = new PValueCalculatorService();
 
@@ -65,7 +70,7 @@ final class PValueCalculatorTest extends TestCase
     {
         $reader = new ParaginExamReader();
 
-        $exam = $reader->read(__DIR__ . '/Fixtures/test_exam_4.xlsx');
+        $exam = $reader->read(__DIR__.'/Fixtures/test_exam_4.xlsx');
 
         $calculator = new PValueCalculatorService();
 

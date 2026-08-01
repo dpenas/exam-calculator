@@ -1,14 +1,13 @@
 <?php
- 
+
 declare(strict_types=1);
- 
+
 namespace App\Infrastructure\Spreadsheet;
 
 use App\Domain\Exam;
 use App\Domain\Question;
 use App\Domain\Student;
 use App\Service\Parser\ParaginExcelParser;
-
 use PhpOffice\PhpSpreadsheet\IOFactory;
 
 final class ParaginExamReader implements ExamReaderInterface
