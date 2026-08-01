@@ -10,6 +10,5 @@ final readonly class GradeResult
         public Student $student,
         public float $grade,
         public bool $passed,
-    ) {
-    }
+    ) {}
 }

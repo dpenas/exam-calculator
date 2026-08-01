@@ -9,6 +9,5 @@ final readonly class Question
     public function __construct(
         public int $number,
         public int $maxScore,
-    ) {
-    }
+    ) {}
 }

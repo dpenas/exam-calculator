@@ -7,6 +7,7 @@ use App\Infrastructure\Spreadsheet\ParaginExamReader;
 use App\Service\Calculation\ParaginGradeCalculatorService;
 use App\Service\Calculation\PValueCalculatorService;
 use App\Service\Calculation\PearsonCorrelationCalculatorService;
+use App\Exporter\ExamToFileExporter;
 
 if ($argc < 2) {
     fwrite(STDERR, "Usage: php {$argv[0]} <excel-file>\n");
@@ -31,7 +32,5 @@ $paraginGrades = $gradeCalculator->calculate($exam);
 $pValue = $pValueCalculator->calculate($exam);
 $pearsonCorrelation = $pearsonCorrelationCalculator->calculate($exam);
 
-var_dump($paraginGrades);
-var_dump($pValue);
-var_dump($pearsonCorrelation);
-die;
+$examToFileExporter = new ExamToFileExporter();
+$examToFileExporter->export($paraginGrades, $pValue, $pearsonCorrelation);

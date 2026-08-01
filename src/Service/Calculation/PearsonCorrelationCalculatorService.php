@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Service\Calculation;
 
 use App\Domain\Exam;
-use App\Domain\GradeResult;
 
 class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
 {
@@ -22,8 +21,8 @@ class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
                 $totalScores[] = array_sum($student->scores);
             }
 
-            $results[$question->number] =
-                $this->calculateCorrelation(
+            $results[$question->number]
+                = $this->calculateCorrelation(
                     $itemScores,
                     $totalScores,
                 );
@@ -43,7 +42,7 @@ class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
         $sumItemScores = 0.0;
         $sumTotalScores = 0.0;
 
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $count; ++$i) {
             $dItemScores = $itemScores[$i] - $meanItemScores;
             $dTotalScores = $totalScores[$i] - $meanTotalScores;
 
@@ -54,7 +53,7 @@ class PearsonCorrelationCalculatorService implements GradeCalculatorInterface
 
         $denominator = sqrt($sumItemScores * $sumTotalScores);
 
-        if ($denominator === 0.0) {
+        if (0.0 === $denominator) {
             return 0.00;
         }
 

@@ -9,6 +9,5 @@ final readonly class Exam
     public function __construct(
         public array $questions,
         public array $students,
-    ) {
-    }
+    ) {}
 }
