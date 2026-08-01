@@ -11,7 +11,7 @@
 - Assumptions
     - I interpolated the grade that someone gets if they fall in between two of the percentages. I basically calculated it as a straight line.
     - Looking at implementing the Pearson correlation coefficient, I'll assume that if the denominator is 0, we'll also return 0, since one of the most logical explanations is that all students gave the same answer and therefore there is not difference at all. This should already raise some flags about the question with the p-value.
-    - I'm also assuming that for the PCC value, we'll use 2 decimals.
+    - I'm also assuming that for the PCC value, we'll use 2 decimals and that we'll not exclude the question itself when we are calculating its PCC (in a real case scenario, it's something I would ask before implementing it, as I put in the refinement document).
 
 - Decisions
     - I decided to implement the PCC formula directly (using Wikipedia and AI) instead of using the math-php package. The main reason is that the formula itself is only a few lines of code and in this assignment I won't use anything else from that package. I don't like reinventing the wheel, but adding extra packages for just a few lines of code can lead to other issues in the future: the package might have CVEs (forcing us to update it during a bad time), the package might become deprecated, future versions of PHP might not work with this package for a while, etc. If other functions were used from it, I would definitely consider using it.

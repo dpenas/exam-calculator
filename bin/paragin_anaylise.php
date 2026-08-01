@@ -6,6 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 use App\Infrastructure\Spreadsheet\ParaginExamReader;
 use App\Service\Calculation\ParaginGradeCalculatorService;
 use App\Service\Calculation\PValueCalculatorService;
+use App\Service\Calculation\PearsonCorrelationCalculatorService;
 
 if ($argc < 2) {
     fwrite(STDERR, "Usage: php {$argv[0]} <excel-file>\n");
@@ -24,5 +25,13 @@ $exam = $reader->read($excelFile);
 
 $gradeCalculator = new ParaginGradeCalculatorService();
 $pValueCalculator = new PValueCalculatorService();
+$pearsonCorrelationCalculator = new PearsonCorrelationCalculatorService();
 
-$grades = $gradeCalculator->calculate($exam);
+$paraginGrades = $gradeCalculator->calculate($exam);
+$pValue = $pValueCalculator->calculate($exam);
+$pearsonCorrelation = $pearsonCorrelationCalculator->calculate($exam);
+
+var_dump($paraginGrades);
+var_dump($pValue);
+var_dump($pearsonCorrelation);
+die;
