@@ -1,4 +1,5 @@
 - Questions for the assessment expert:
+    - About the grade: what happens in between the percentages? If a student gets a 99%, will they also receive a 5.5, same as someone who only got 70%? This seems a bit strange, so for this assessment I will do some interpolation.
     - When calculating the p-value:
         - Is the maximum score gotten from the values that the students have gotten or from what you should get if you answer the question right?
         - Which value should we use in the edge case that nobody answered the question correctly (because we can't divide by zero)?
@@ -9,4 +10,5 @@
     - (also to the assessment expert): For both analyitic values: should we include all students and all values or are there some of them that should be excluded (they didn't finish all the questions, for example)?
     - (also to the assessment expert): Is there a difference between a student giving the wrong answer and not responding to the question?
     - Is there a specific way that we should present this data?
+    - Do we need to keep a history of these results?
     
